@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var runSequence = require('run-sequence');
 var changed = require('gulp-changed');
 var plumber = require('gulp-plumber');
+var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var paths = require('../paths');
 var assign = Object.assign || require('object.assign');
@@ -48,6 +49,15 @@ gulp.task('build-css', function() {
     .pipe(browserSync.stream());
 });
 
+gulp.task('build-scss-aurelia', function () {
+  return gulp.src(paths.scss)
+      .pipe(plumber())
+      .pipe(sass())
+      .pipe(gulp.dest(paths.output))
+      .pipe(browserSync.stream());
+});
+
+
 // this task calls the clean task (located
 // in ./clean.js), then runs the build-system
 // and build-html tasks in parallel
@@ -55,7 +65,7 @@ gulp.task('build-css', function() {
 gulp.task('build', function(callback) {
   return runSequence(
     'clean',
-    ['build-system', 'build-html', 'build-css'],
+    ['build-system', 'build-html', 'build-css', 'build-scss-aurelia'],
     callback
   );
 });
