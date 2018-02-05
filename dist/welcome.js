@@ -3,7 +3,7 @@ define(["require", "exports"], function (require, exports) {
     Object.defineProperty(exports, "__esModule", { value: true });
     var Welcome = (function () {
         function Welcome() {
-            this.heading = 'Welcome to the Aurelia Navigation App!';
+            this.heading = 'Welcome to A Very Baggy Demo!';
             this.firstName = 'John';
             this.lastName = 'Doe';
             this.previousValue = this.fullName;
