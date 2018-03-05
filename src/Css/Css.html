@@ -1,0 +1,47 @@
+
+<template>
+  <require from="./Css.css"></require>
+  <h4 class="text-success text-center menu-header">Css positioning Demo</h4>
+  <div class="row">
+    <div class="recMenu">
+      <div class="row"><span class="positioning-label text-info">Rectangle</span>
+        <div id="circGroup" role="group" data-toggle="radio" class="btn-group options-group pull-right">
+          <button class.bind="rectangle.position == 'static' ? 'selected' : ''" type="button" click.delegate="changePosition(rectangle, 'static')" class="btn btn-default">Static</button>
+          <button class.bind="rectangle.position == 'fixed' ? 'selected' : ''" type="button" click.delegate="changePosition(rectangle, 'fixed')" class="btn btn-default">Fixed</button>
+          <button class.bind="rectangle.position == 'relative' ? 'selected' : ''" type="button" click.delegate="changePosition(rectangle, 'relative')" class="btn btn-default">Relative</button>
+          <button class.bind="rectangle.position == 'absolute' ? 'selected' : ''" type="button" click.delegate="changePosition(rectangle, 'absolute')" class="btn btn-default">Absolute</button>
+        </div>
+      </div>
+      <div class="row"><span class="positioning-label text-success">Circle</span>
+        <div id="circGroup" role="group" data-toggle="radio" class="btn-group options-group pull-right">
+          <button class.bind="circle.position == 'static' ? 'selected' : ''" type="button" click.delegate="changePosition(circle, 'static')" class="btn btn-default">Static</button>
+          <button class.bind="circle.position == 'fixed' ? 'selected' : ''" type="button" click.delegate="changePosition(circle, 'fixed')" class="btn btn-default">Fixed</button>
+          <button class.bind="circle.position == 'relative' ? 'selected' : ''" type="button" click.delegate="changePosition(circle, 'relative')" class="btn btn-default">Relative</button>
+          <button class.bind="circle.position == 'absolute' ? 'selected' : ''" type="button" click.delegate="changePosition(circle, 'absolute')" class="btn btn-default">Absolute</button>
+        </div>
+      </div>
+      <div class="row"><span class="positioning-label text-primary">Square</span>
+        <div id="sqGroup" role="group" data-toggle="radio" class="btn-group options-group pull-right">
+          <button class.bind="square.position == 'static' ? 'selected' : ''" type="button" click.delegate="changePosition(square, 'static')" class="btn btn-default">Static</button>
+          <button class.bind="square.position == 'fixed' ? 'selected' : ''" type="button" click.delegate="changePosition(square, 'fixed')" class="btn btn-default">Fixed</button>
+          <button class.bind="square.position == 'relative' ? 'selected' : ''" type="button" click.delegate="changePosition(square, 'relative')" class="btn btn-default">Relative</button>
+          <button class.bind="square.position == 'absolute' ? 'selected' : ''" type="button" click.delegate="changePosition(square, 'absolute')" class="btn btn-default">Absolute</button>
+        </div>
+      </div>
+      <div class="row"><span class="positioning-label text-danger">Triangle</span>
+        <div id="triGroup" role="group" data-toggle="radio" class="btn-group options-group pull-right">
+          <button class.bind="triangle.position == 'static' ? 'selected' : ''" type="button" click.delegate="changePosition(triangle, 'static')" class="btn btn-default">Static</button>
+          <button class.bind="triangle.position == 'fixed' ? 'selected' : ''" type="button" click.delegate="changePosition(triangle, 'fixed')" class="btn btn-default">Fixed</button>
+          <button class.bind="triangle.position == 'relative' ? 'selected' : ''" type="button" click.delegate="changePosition(triangle, 'relative')" class="btn btn-default">Relative</button>
+          <button class.bind="triangle.position == 'absolute' ? 'selected' : ''" type="button" click.delegate="changePosition(triangle, 'absolute')" class="btn btn-default">Absolute</button>
+        </div>
+      </div>
+    </div><br/>
+  </div>
+  <div class="super-container">
+    <div class.bind="rectangle.position" class="rectangle"></div>
+    <div class.bind="circle.position" class="circle"></div>
+    <div class.bind="square.position" class="square"></div>
+    <div class.bind="triangle.position" class="triangle"></div>
+  </div>
+</template>

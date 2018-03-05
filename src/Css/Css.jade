@@ -1,0 +1,39 @@
+﻿template
+	require(from="./Css.css")
+	h4.text-success.text-center.menu-header Css positioning Demo
+	.row
+		.recMenu
+			.row
+				span.positioning-label.text-info Rectangle
+				#circGroup.btn-group.options-group.pull-right(role='group', data-toggle='radio')
+					button.btn.btn-default(class.bind="rectangle.position == 'static' ? 'selected' : ''"      type='button', click.delegate="changePosition(rectangle, 'static')") Static
+					button.btn.btn-default(class.bind="rectangle.position == 'fixed' ? 'selected' : ''"      type='button', click.delegate="changePosition(rectangle, 'fixed')") Fixed
+					button.btn.btn-default(class.bind="rectangle.position == 'relative' ? 'selected' : ''"    type='button', click.delegate="changePosition(rectangle, 'relative')") Relative
+					button.btn.btn-default(class.bind="rectangle.position == 'absolute' ? 'selected' : ''"    type='button', click.delegate="changePosition(rectangle, 'absolute')") Absolute
+			.row
+				span.positioning-label.text-success Circle
+				#circGroup.btn-group.options-group.pull-right(role='group', data-toggle='radio')
+					button.btn.btn-default(class.bind="circle.position == 'static' ? 'selected' : ''"      type='button', click.delegate="changePosition(circle, 'static')") Static
+					button.btn.btn-default(class.bind="circle.position == 'fixed' ? 'selected' : ''"      type='button', click.delegate="changePosition(circle, 'fixed')") Fixed
+					button.btn.btn-default(class.bind="circle.position == 'relative' ? 'selected' : ''"    type='button', click.delegate="changePosition(circle, 'relative')") Relative
+					button.btn.btn-default(class.bind="circle.position == 'absolute' ? 'selected' : ''"    type='button', click.delegate="changePosition(circle, 'absolute')") Absolute
+			.row
+				span.positioning-label.text-primary Square
+				#sqGroup.btn-group.options-group.pull-right(role='group', data-toggle='radio')
+					button.btn.btn-default(class.bind="square.position == 'static' ? 'selected' : ''"   type='button', click.delegate="changePosition(square, 'static')") Static
+					button.btn.btn-default(class.bind="square.position == 'fixed' ? 'selected' : ''"    type='button', click.delegate="changePosition(square, 'fixed')") Fixed
+					button.btn.btn-default(class.bind="square.position == 'relative' ? 'selected' : ''" type='button', click.delegate="changePosition(square, 'relative')") Relative
+					button.btn.btn-default(class.bind="square.position == 'absolute' ? 'selected' : ''" type='button', click.delegate="changePosition(square, 'absolute')") Absolute
+			.row
+				span.positioning-label.text-danger Triangle
+				#triGroup.btn-group.options-group.pull-right(role='group', data-toggle='radio')
+					button.btn.btn-default(class.bind="triangle.position == 'static' ? 'selected' : ''"    type='button', click.delegate="changePosition(triangle, 'static')") Static
+					button.btn.btn-default(class.bind="triangle.position == 'fixed' ? 'selected' : ''"    type='button', click.delegate="changePosition(triangle, 'fixed')") Fixed
+					button.btn.btn-default(class.bind="triangle.position == 'relative' ? 'selected' : ''" type='button', click.delegate="changePosition(triangle, 'relative')") Relative
+					button.btn.btn-default(class.bind="triangle.position == 'absolute' ? 'selected' : ''" type='button', click.delegate="changePosition(triangle, 'absolute')") Absolute
+		br
+	.super-container
+		.rectangle(class.bind='rectangle.position')
+		.circle(class.bind='circle.position')
+		.square(class.bind='square.position')
+		.triangle(class.bind='triangle.position')

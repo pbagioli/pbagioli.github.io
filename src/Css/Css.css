@@ -1,0 +1,107 @@
+﻿
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.big-title {
+    font-size: 28px;
+}
+
+.wizard-title {
+    font-size: 20px;
+}
+
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 50px solid #ed1c1a;
+}
+
+.circle {
+    border-radius: 50%;
+    background-color: #a6ce39;
+    width: 50px;
+    height: 50px;
+    /* width and height can be anything, as long as they're equal */
+}
+
+
+.square {
+    background-color: #0071c5;
+    width: 50px;
+    height: 50px;
+    /* width and height can be anything, as long as they're equal */
+}
+
+.rectangle {
+    background-color: #00aeef;
+    width: 600px;
+    height: 200px;
+    /* width and height can be anything, as long as they're equal */
+}
+
+.super-container {
+    width: 600px;
+    height: 2000px;
+}
+
+.positioning-label {
+    margin-left: 20px;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+
+.recMenu {
+    height: 200px;
+    width: 600px;
+    margin-left: 15px;
+}
+
+
+.codeMenu {
+    border-style: solid;
+    border-width: 5px;
+    border-color: #00aeef;
+    height: 200px;
+    width: 400px;
+    margin-left: 15px;
+}
+
+
+.options-group {
+    margin-left: 170px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.static {
+    position: static;
+}
+
+.relative {
+    position: relative;
+}
+
+.selected {
+    background-color: #b1babf !important;
+}
+
+
